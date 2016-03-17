@@ -52,7 +52,5 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-# Halcyon
-eval "$(/app/halcyon/halcyon paths)"
+# heroku toolbelt
 export PATH="usr/local/heroku/bin:$PATH"
