@@ -1,0 +1,64 @@
+-----------------------------------------
+-- psqlrc file to set psql preferences --
+-- author : dled       --
+-- date : 09 27 15 --
+-- https://opensourcedbms.com/dbms/psqlrc-psql-startup-file-for-postgres/
+-----------------------------------------
+\set QUIET 1
+
+\timing
+\encoding unicode
+
+\set PROMPT1 '%[%033[1;33m%]%M%[%033[0m%]%[%033[1;31m%]:%>%[%033[0m%] %[%033[1;32m%]%n%[%033[0m%]%[%033[1;34m%]@%/%[%033[0m%]%R%#%x '
+\set PROMPT2 '%[%033[1;32m%]%n%[%033[0m%]@%[%033[1;34m%]%/%[%033[0m%]%R%#%x '
+\set PAGER always
+\set HISTFILE ~/.psql_history
+\set HISTSIZE 2000
+\set HISTCONTROL ignoredups
+--\set VERBOSITY verbose
+
+\set ON_ERROR_ROLLBACK interactive
+\set COMP_KEYWORD_CASE preserve-lower
+
+\x auto
+\pset null '[null]'
+\pset border 2
+
+\set QUIET 0
+
+\echo '\nCurrent host server date time : '`date` '\n'
+
+\echo 'Admin queries:\n'
+\echo '\t\t\t:settings\t-- Key settings'
+\echo '\t\t\t:configs\t-- File locations'
+\echo '\t\t\t:extents\t-- Downloaded extensions'
+\echo '\t\t\t:extends\t-- Available extensions'
+\echo '\t\t\t:dbsize\t\t-- Database size'
+\echo '\t\t\t:tablesize\t-- Tables size'
+\echo '\t\t\t:uptime\t\t-- Server uptime'
+\echo '\t\t\t:menu\t\t-- Help Menu'
+\echo '\t\t\t\\h\t\t-- Help with SQL commands'
+\echo '\t\t\t\\?\t\t-- Help with psql commands\n'
+
+\echo 'Devel queries:\n'
+\echo '\t\t\t:sp\t\t-- Current Search Path'
+\echo '\t\t\t:clear\t\t-- Clear screen'
+\echo '\t\t\t:ll\t\t-- List\n'
+
+-- Admin queries
+\set menu '\\i ~/.psqlrc'
+\set version 'SELECT version();'
+\set settings 'SELECT name, context, unit, setting, boot_val, reset_val FROM pg_settings WHERE name IN (\'listen_addresses\',\'max_connections\',\'shared_buffers\',\'effective_cache_size\',\'work_mem\',\'maintenance_work_mem\') ORDER BY context, name;'
+\set configs 'SELECT name, setting FROM pg_settings WHERE category = \'File Locations\';'
+\set extents 'SELECT name, default_version, installed_version, LEFT(comment,30) AS comment FROM pg_available_extensions WHERE installed_version IS NOT NULL ORDER BY name;'
+\set extends 'SELECT * from pg_available_extensions;'
+
+\set dbsize 'SELECT datname, pg_size_pretty(pg_database_size(datname)) db_size FROM pg_database ORDER BY db_size;'
+\set tablesize 'SELECT nspname || \'.\' || relname AS \"relation\", pg_size_pretty(pg_relation_size(C.oid)) AS "size" FROM pg_class C LEFT JOIN pg_namespace N ON (N.oid = C.relnamespace) WHERE nspname NOT IN (\'pg_catalog\', \'information_schema\') ORDER BY pg_relation_size(C.oid) DESC LIMIT 40;'
+
+\set uptime 'select now() - pg_postmaster_start_time() AS uptime;'
+
+-- Devel queries:
+\set sp 'SHOW search_path;'
+\set clear '\\! clear;'
+\set ll '\\! ls -lrt;'
