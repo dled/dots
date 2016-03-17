@@ -10,3 +10,9 @@ alias ls="ls --color=auto"
 alias lh='ls -l .??*'
 alias lhd='ls -ld .??*'
 alias ll="ls -al"
+# tmux
+alias tma='tmux attach -d -t'
+alias tmn='tmux new -s $(basename $(pwd))' # make -global ?
+alias tml='tmux list-sessions'
+# bower
+alias bower='noglob bower'
