@@ -1,0 +1,30 @@
+[user]
+	email = dtledbetter@gmail.com
+    name = Dylan Ledbetter
+[url "git://github.com/ghc/packages-"]
+        insteadOf = git://github.com/ghc/packages/
+[url "http://github.com/ghc/packages-"]
+        insteadOf = http://github.com/ghc/packages/
+[url "https://github.com/ghc/packages-"]
+        insteadOf = https://github.com/ghc/packages/
+[url "ssh://git@github.com/ghc/packages-"]
+        insteadOf = ssh://git@github.com/ghc/packages/
+[url "git@github.com:/ghc/packages-"]
+        insteadOf = git@github.com:/ghc/packages/
+[alias]
+	ck = checkout
+	cm = commit -am
+	br = branch
+	bm = branch --merged
+	bn = branch --no-merged
+	bv = branch -v
+	ci = commit
+	ca = commit -a
+	ra = remote add
+	rv = remote -v
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	logg = log --oneline --decorate --graph --all
+	visual = !gitk
+	mt = mergetool
