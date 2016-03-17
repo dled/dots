@@ -1,6 +1,0 @@
-(flet ((split-the-line (line)
-                   (filter (lambda (cell) (not (string-empty-p cell)))
-                           (split-string (string-trim line) regex))))
-  (if (stringp data)
-      (mapcar 'split-the-line (split-string data "[\n\r]+" t))
-    data))   ;; Not a string? Just return the value...
