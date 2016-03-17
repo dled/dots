@@ -1,0 +1,12 @@
+# pretty path
+alias path='echo $PATH | tr -s ":" "\n"'
+alias mkdir="mkdir -p"
+alias diff="colordiff"
+alias df="df -H"
+alias du="du -ch"
+alias install="sudo apt-get install"
+alias glog="git log --graph --oneline --decorate --date-order --color --boundary"
+alias ls="ls --color=auto"
+alias lh='ls -l .??*'
+alias lhd='ls -ld .??*'
+alias ll="ls -al"
