@@ -10,6 +10,11 @@ alias ls="ls --color=auto"
 alias lh='ls -l .??*'
 alias lhd='ls -ld .??*'
 alias ll="ls -al"
+# gzip / bzip
+alias targx="tar -zxvf"
+alias targc="tar -cxvf"
+alias tarbx="tar --bzip2 -xvf"
+alias tarbc="tar --bzip2 -cvf"
 # tmux
 alias tma='tmux attach -d -t'
 alias tmn='tmux new -s $(basename $(pwd))' # make -global ?
