@@ -16,3 +16,4 @@ alias tmn='tmux new -s $(basename $(pwd))' # make -global ?
 alias tml='tmux list-sessions'
 # bower
 alias bower='noglob bower'
+alias halcyoninit='eval "$( /app/halcyon/halcyon paths )"'
