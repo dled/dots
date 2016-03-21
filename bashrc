@@ -5,8 +5,8 @@
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-
-
+# GHC + cabal
+# export PATH="/opt/cabal/1.22/bin:/opt/ghc/7.10.1/bin:$PATH"
 
 # add to path
 
