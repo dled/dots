@@ -1,12 +1,12 @@
-[submodule "zplug"]
-	path = zplug
+[submodule "zsh.d/zplug"]
+	path = zsh.d/zplug
 	url = https://github.com/b4b4r07/zplug.git
-[submodule "zplug2"]
-	path = zplug2
+[submodule "zsh.d/zplug2"]
+	path = zsh.d/zplug2
 	url = https://github.com/b4b4r07/zplug2.git
-[submodule "zprezto"]
-	path = zprezto
+[submodule "zsh.d/zprezto"]
+	path = zsh.d/zprezto
 	url = https://github.com/sorin-ionescu/prezto.git
-[submodule "oh-my-zsh"]
-	path = oh-my-zsh
+[submodule "zsh.d/oh-my-zsh"]
+	path = zsh.d/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
