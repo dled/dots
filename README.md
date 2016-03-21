@@ -16,7 +16,7 @@ At the outset of the project, I'm using
 
 Myriad more creditworthy configuration frameworks successfully manage 'dot files' and excel at plugging/extending shells and editors.  
 
-_ HT _
+_HT_
 
 [Oh-My-Zsh](http://ohmyz.sh/) & [Antigen](http://antigen.sharats.me/)  
 [zplug](https://github.com/b4b4r07/zplug) // [zplug2](https://github.com/b4b4r07/zplug2) // [prezto](https://github.com/sorin-ionescu/prezto)  
@@ -24,7 +24,7 @@ _ HT _
 [Vundle](https://github.com/VundleVim/Vundle.vim) & [pathogen](https://github.com/tpope/vim-pathogen)  
 [vim-plug](https://github.com/junegunn/vim-plug/wiki/faq)  
 
-_ THX _
+_THX_
 
 I always appreciate the finesse it takes to lead a live demo or create a screencast that is as viewable as it is illuminating. Thank you,
 
