@@ -2,6 +2,12 @@
 # bashrc
 
 # vars
+EDITOR="emacsclient -qa"
+VISUAL="vim"
+PAGER=less
+LESS=FRmeiX
+export EDITOR VISUAL PAGER LESS
+
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 # GHC + cabal
@@ -12,6 +18,10 @@ export HALCYON_CABAL_VERSION=1.22.6.0
 # node
 export NPM_CONFIG_PREFIX="$HOME/.npm-global"
 export NODE_PATH="$NPM_CONFIG_PREFIX/lib/node_modules"
+# Heroku toolbelt @ /usr/local/heroku/bin
+# export PATH="/usr/local/heroku/bin:$PATH"
+# TODO: ln -s /usr/local/heroku/bin/?? ~bin
+
 # sassc
 SASS_LIBSASS_PATH="$HOME/.libsass"
 SASS_SASSC_PATH="$HOME/.sassc"
