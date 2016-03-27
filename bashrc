@@ -7,8 +7,10 @@ export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64/jre"
 export PYENV_ROOT="$HOME/.pyenv"
 # GHC + cabal
 # export PATH="/opt/cabal/1.22/bin:/opt/ghc/7.10.1/bin:$PATH"
-
-# add to path
+# Go
+export GOROOT="$HOME/go"
+export PATH="$PATH:$GOROOT/bin"
+# prepend to path
 export PATH="$JAVA_HOME/bin:$PATH"
 export PATH="$SRC/apache-maven-3.3.9/bin:$PATH"
 # user dir (casper + phantomjs symlinked)
