@@ -10,3 +10,30 @@
 [submodule "zsh.d/oh-my-zsh"]
 	path = zsh.d/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "emacsd/vendor/org-bullets"]
+	path = emacsd/vendor/org-bullets
+	url = https://github.com/sabof/org-bullets.git
+[submodule "emacsd/vendor/emmet-mode"]
+	path = emacsd/vendor/emmet-mode
+	url = https://github.com/smihica/emmet-mode
+[submodule "emacsd/vendor/wrap-region.el"]
+	path = emacsd/vendor/wrap-region.el
+	url = https://github.com/rejeep/wrap-region.el
+[submodule "emacsd/vendor/expand-region.el"]
+	path = emacsd/vendor/expand-region.el
+	url = https://github.com/magnars/expand-region.el
+[submodule "emacsd/vendor/clojure-mode"]
+	path = emacsd/vendor/clojure-mode
+	url = https://github.com/clojure-emacs/clojure-mode
+[submodule "emacsd/vendor/smartparens"]
+	path = emacsd/vendor/smartparens
+	url = https://github.com/Fuco1/smartparens
+[submodule "emacsd/snippets/clojure-snippets"]
+	path = emacsd/snippets/clojure-snippets
+	url = http://github.com/swannodette/clojure-snippets
+[submodule "emacsd/vendor/clj-refactor.el"]
+	path = emacsd/vendor/clj-refactor.el
+	url = https://github.com/clojure-emacs/clj-refactor.el
+[submodule "emacsd/vendor/cider"]
+	path = emacsd/vendor/cider
+	url = https://github.com/clojure-emacs/cider
