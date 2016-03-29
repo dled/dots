@@ -1,30 +1,59 @@
-[user]
-	email = dtledbetter@gmail.com
-    name = Dylan Ledbetter
-[url "git://github.com/ghc/packages-"]
-        insteadOf = git://github.com/ghc/packages/
-[url "http://github.com/ghc/packages-"]
-        insteadOf = http://github.com/ghc/packages/
-[url "https://github.com/ghc/packages-"]
-        insteadOf = https://github.com/ghc/packages/
-[url "ssh://git@github.com/ghc/packages-"]
-        insteadOf = ssh://git@github.com/ghc/packages/
-[url "git@github.com:/ghc/packages-"]
-        insteadOf = git@github.com:/ghc/packages/
+[core]
+    pager = less -q -R
+    excludesfile = ~/.gitignore
+    preloadindex = true
+
+[color]
+    ui = auto
+
 [alias]
-	ck = checkout
-	cm = commit -am
-	br = branch
-	bm = branch --merged
-	bn = branch --no-merged
-	bv = branch -v
-	ci = commit
-	ca = commit -a
-	ra = remote add
-	rv = remote -v
-	st = status
-	unstage = reset HEAD --
-	last = log -1 HEAD
-	logg = log --oneline --decorate --graph --all
-	visual = !gitk
-	mt = mergetool
+    st = status
+    co = checkout
+    ci = commit
+    df = diff
+    t  = typechange
+    graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
+
+[help]
+    autocorrect = 1
+
+[push]
+    # Use the Git 1.x.x default to avoid errors on machines with old Git
+    # installations. To use `simple` instead, add this to your `~/.extra` file:
+    # `git config --global push.default simple`. See http://git.io/mMah-w.
+    default = matching
+
+[user]
+    name  = dled
+    email = dtledbetter@gmail.com
+
+[pager]
+    log  = diff-highlight | less -RX
+    show = diff-highlight | less -RX
+    diff = diff-highlight | less -RX
+
+[diff]
+    tool      = vimdiff
+    algorithm = histogram
+
+[ghq]
+    root = ~/src
+
+[merge]
+    tool = vimdiff
+
+[zgit "keybind"]
+    echo   = ctrl-e
+    add    = ctrl-a
+    add-p  = ctrl-w
+    commit = ctrl-c
+    diff   = ctrl-d
+    reset  = ctrl-r
+
+[zgit "default"]
+    toggle-all = ctrl-z
+
+[zgit "core"]
+    action   = status
+    tool     = enhancd
+    lessopen = "| pygmentize -O style=solarized -f console256 -g %s"

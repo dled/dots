@@ -37,3 +37,6 @@
 [submodule "emacsd/vendor/cider"]
 	path = emacsd/vendor/cider
 	url = https://github.com/clojure-emacs/cider
+[submodule "zsh.d/antigen"]
+	path = zsh.d/antigen
+	url = https://github.com/zsh-users/antigen
