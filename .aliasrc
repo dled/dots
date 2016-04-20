@@ -1,5 +1,9 @@
 #!/bin/bash
 
+alias rstudio-server='sudo /usr/sbin/rstudio-server'
+alias apmi="apm install"
+
+# nav
 alias path='echo $PATH | tr -s ":" "\n"'
 alias mkdir="mkdir -p"
 alias diff="colordiff"
@@ -17,6 +21,7 @@ alias targc="tar -cxvf"
 alias tarbx="tar --bzip2 -xvf"
 alias tarbc="tar --bzip2 -cvf"
 # tmux
+alias tmux='tmux -2'
 alias tma='tmux attach -d -t'
 alias tmn='tmux new -s $(basename $(pwd))' # make -global ?
 alias tml='tmux list-sessions'
