@@ -9,26 +9,29 @@
 #	. "${ZDOTDIR:-$HOME}/.zplug/zplug"
 #fi
 
-export EMACs="emacsclient -qa"
+
 
 export HISTFILE="$HOME/.zsh_history"
 export HISTCONTROL=ignoreboth:erasedups
 export HISTTIMEFORMAT="%Y/%m/%d %H:%M:%S:   "
-export HISTSIZE=25000
+export HISTSIZE=50000
 export HISTFILESIZE=50000
 
 #export EMACS="emacsclient -qa"
-export EMACS="/usr/bin/emacs"
-export EDITOR="$EMACS"
+export EDITOR="nano"
 export VISUAL='vim'
 export PAGER='less'
 export LESS='-FgiMRSwXz4'
 
-# should this be tethered?
-#export PYENV_ROOT='$HOME/.pyenv'
-export NPM_CONFIG_PREFIX='~/.npm-global'
+export JAVA_HOME='/usr/lib/jvm/java-8-openjdk-amd64'
 
-# typeset -gU(T?) home?
+export PYENV_ROOT="$HOME/.pyenv"
+#eval "$( pyenv init - )"
+#eval "$( rbenv init - )"
+
+export GOROOT='/usr/lib/go'
+export GOPATH="$HOME/go"
+
 typeset -gU cdpath fpath manpath path
 typeset -gUT INFOPATH infopath
 
@@ -36,6 +39,11 @@ cpath=(
     $HOME/.repos
     $cdpath
 )
+
+#fpath=(
+#    $HOME/.zsh/completion
+#    $fpath
+#)
 
 infopath=(
     $HOME/.linuxbrew/share/info
@@ -51,11 +59,15 @@ manpath=(
     $manpath
 )
 
-
-#   $HOME/{.rbenv,.pyenv}/{shims,bin} ?
 path=(
+    $HOME/.npm-global/bin
+    $GOPATH/bin
+    $PYENV_ROOT/{bin,shims}
+    $HOME/.rbenv/{bin,shims}
+    $HOME/.linuxbrew/bin
+    $MAVEN_HOME/bin
+    $JAVA_HOME/bin
     $HOME/{bin,sbin}
-    $NPM_CONFIG_PREFIX/bin
     $HOME/.local/{bin,sbin}
     /usr/local/{bin,sbin}
     /usr/{bin,sbin}
