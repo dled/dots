@@ -1,0 +1,41 @@
+nyt api keys
+http://developer.nytimes.com/apps/myapps
+name: ledlex
+Article Search API 	305a99f2da1e613fb4c7b8e1f7e723f4:4:68587860
+Campaign Finance API 	bfc2cc5350ae70166a5b6ed1eeee8e1a:8:68587860
+Congress API 	28fde45a353ae5750d34b5b418d969df:15:68587860
+Districts API 	232eded89a2f904919c894d2826ceaa5:17:68587860
+Geo API 	10446becdc91965bc971d9d0d09a3fb9:7:68587860
+Semantic API 	797117a71a584c967b3aed3e146adb2f:2:68587860
+Times Newswire API 	9d3db89fed23fc7eb2210f556aae19c8:11:68587860
+Top Stories API 	b4d244dc5f73165fa8f826daeb91c04d:16:68587860
+
+twitter API credentials
+consKey = "XXTOn3zNVW6u8Ai7gPmXzye2H"
+consSecret = "xzAkdpyRAe2UuuTV8G88zAy1NdMz8FikSGacTn0lagz1NezQg3"
+accToken = "317955918-BGzIhtAx91HwtXaU21kL4msTYyaJxAUYzOp72ChD"
+accTokenSecret =  "94JvNmWtgQNpg8IwNHeuBtPWT2iapsPilNEynYrv3J8hu"
+owner = "dtledbetter"
+owner_id = "317955918"
+
+weather underground
+http://www.wunderground.com/weather/api/d/4b8bd073d7eb188d/edit.html
+rainman
+"4b8bd073d7eb188d"
+
+world bank
+http://data.worldbank.org/developers/api-sources
+http://data.worldbank.org/developers/api-overview
+http://data.worldbank.org/developers/api-overview/aggregates-regions-and-income-levels
+
+- http://data.worldbank.org/indicator
+	- XML / JSON
+- http://search.worldbank.org/api/v2/projects
+	- Atom
+- http://data.worldbank.org/data-catalog/country-profiles
+
+dtledbetter@gmail.com
+c4r0k4nn
+
+socrata
+https://dev.socrata.com/
