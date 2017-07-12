@@ -8,13 +8,11 @@ At the time of this writing, I'm using this repo to test different set-ups for s
 - log-ins & remote connections
 - nesting rules ( e.g., tmux :: emacs :: eshell : zsh )
 
-At the outset of the project, I'm using
+At the outset of the project (November 2015), I'm using
 
 - ZSH 5.0.2
 - GNU Emacs 25.1 && 24.5
 - tmux 1.9
-
-Myriad more creditworthy configuration frameworks successfully manage 'dot files' and excel at plugging/extending shells and editors.
 
 _HT_
 
@@ -25,8 +23,6 @@ _HT_
 [vim-plug](https://github.com/junegunn/vim-plug/wiki/faq)
 
 _THX_
-
-I always appreciate the finesse it takes to lead a live demo or create a screencast that is as viewable as it is illuminating. Thank you,
 
 [Howard Abrams](http://howardism.org/)
 [Aaron Bieber](http://blog.aaronbieber.com/)
