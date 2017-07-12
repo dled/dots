@@ -8,6 +8,8 @@
 export LANG=en_US.UTF-8
 export ARCHFLAGS="-arch x86_64"
 
+export TERM="screen-256color"
+
 export HISTFILE="$HOME/.zsh_history"
 export HISTCONTROL=ignoreboth:erasedups
 export HISTTIMEFORMAT="%Y/%m/%d %H:%M:%S:   "
@@ -27,8 +29,8 @@ else
   export EDITOR='emacs'
 fi
 
-#export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-
+export JAVA_HOME=/opt/java/64/jdk1.8.0_131
+export M2_HOME=/opt/maven/apache-maven-3.5.0
 typeset -gU cdpath fpath manpath path
 typeset -gUT INFOPATH infopath
 
@@ -55,8 +57,8 @@ manpath=(
 )
 
 path=(
-    $HOME/.npm-global/bin
-    $PYENV_ROOT/{bin,shims}
+    $JAVA_HOME/bin
+    $M2_HOME/bin 
     $HOME/{bin,sbin}
     $HOME/.local/{bin,sbin}
     /usr/local/{bin,sbin}
@@ -70,4 +72,3 @@ if [[ -d "$TMPDIR" ]]; then
     mkdir -p "$TMPPREFIX"
   fi
 fi
-

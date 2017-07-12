@@ -4,12 +4,12 @@
 
 (defun dl/emacs-subdir (d) (expand-file-name d dl/emacs-dir))
 ;; + subdirs
-(let* ((subdirs '("elisp" "vendor" "backups" "snippets" "ac-dict"))
-       (fulldirs (mapcar (lambda (d) (dl/emacs-subdir d)) subdirs)))
-  (dolist (dir fulldirs)
-    (when (not (file-exists-p dir))
-      (message "Make directory: %s" dir)
-      (make-directory dir))))
+;;(let* ((subdirs '("elisp" "vendor" "backups" "snippets" "ac-dict"))
+;;       (fulldirs (mapcar (lambda (d) (dl/emacs-subdir d)) subdirs)))
+;;  (dolist (dir fulldirs)
+;;    (when (not (file-exists-p dir))
+;;      (message "Make directory: %s" dir)
+;;      (make-directory dir))))
 
 ;; custom in .emacs.d
 (setq custom-file (expand-file-name "custom.el" dl/emacs-dir))
@@ -38,9 +38,9 @@
 (require 'use-package)
 
 ;; mail-addr
-(if (equal "dled" user-login-name)
-    (setq user-mail-address "dt@ledbetter.co")
-  (setq user-mail-address "dt@ledbetter.co"))
+;;(if (equal "dled" user-login-name)
+;;    (setq user-mail-address "dt@ledbetter.co")
+;;  (setq user-mail-address "dt@ledbetter.co"))
 
 ;; initialize
 (load-file "~/.emacs.d/elisp/init-main.el")

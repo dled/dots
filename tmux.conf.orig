@@ -1,5 +1,4 @@
 # tmux 2.2 config
-set -g utf8 on
 set -g default-terminal "screen-256color"
 set -g focus-events on
 set -g repeat-time 0
@@ -86,9 +85,9 @@ bind -n F10 select-window -t 10
 
 
 # mouse support
-setw -g mode-mouse on
+#setw -g mode-mouse on
 #set -g mouse-select-pane on
-set -g mouse-resize-pane on
+#set -g mouse-resize-pane on
 #set -g mouse-select-window on
 
 
