@@ -1,8 +1,6 @@
-#!/bin/bash
-
+#!/usr/bin/zsh
 alias rstudio-server='sudo /usr/sbin/rstudio-server'
 alias apmi="apm install"
-
 # nav
 alias path='echo $PATH | tr -s ":" "\n"'
 alias mkdir="mkdir -p"
@@ -26,5 +24,3 @@ alias tma='tmux attach -d -t'
 alias tmn='tmux new -s $(basename $(pwd))' # make -global ?
 alias tml='tmux list-sessions'
 # bower
-alias bower='noglob bower'
-alias halcyoninit='eval "$( /app/halcyon/halcyon paths )"'
