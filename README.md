@@ -14,8 +14,6 @@ At the outset of the project, I'm using
 - GNU Emacs 25.1 && 24.5
 - tmux 1.9
 
-Myriad more creditworthy configuration frameworks successfully manage 'dot files' and excel at plugging/extending shells and editors.
-
 _HT_
 
 [Oh-My-Zsh](http://ohmyz.sh/) & [Antigen](http://antigen.sharats.me/)
