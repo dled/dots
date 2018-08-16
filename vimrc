@@ -72,18 +72,19 @@ nnoremap gV `[v`]
 " set foldlevelstart=10
 
 " trim trailing whitespace
-function! <SID>TrimWS()
-    let _s=@/
-    let l = line(".")
-    let c = col(".")
-    %s/\s\+$//e
-    let @/=_s
-    call cursor(l, c)
-endfunction
+" function! <SID>TrimWS()
+"    let _s=@/
+"    let l = line(".")
+"    let c = col(".")
+"    %s/\s\+$//e
+"    let @/=_s
+"    call cursor(l, c)
+" endfunction
 
+" NB: vim-plug sets these 'on' with plug#begin()
 " local filetype settings
-filetype on
-filetype plugin indent on
+" filetype on
+" filetype plugin indent on
 
 " filetypes
 augroup filetypes
@@ -93,15 +94,15 @@ augroup filetypes
 augroup END
 
 " buffers
-augroup buflocal
-    autocmd!
-    autocmd VimEnter * highlight clear SignColumn
-    autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md,*.rb :call <SID>TrimwWS()
-    autocmd BufEnter *.cls setlocal filetype=java
-    autocmd BufEnter *.zsh-theme setlocal filetype=zsh
-    autocmd BufEnter Makefile setlocal noexpandtab
-    autocmd BufEnter *.sh setlocal ts=2 sw=2 sts=2
-augroup END
+" augroup buflocal
+"    autocmd!
+"    autocmd VimEnter * highlight clear SignColumn
+"    autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md,*.rb :call <SID>TrimwWS()
+"    autocmd BufEnter *.cls setlocal filetype=java
+"    autocmd BufEnter *.zsh-theme setlocal filetype=zsh
+"    autocmd BufEnter Makefile setlocal noexpandtab
+"    autocmd BufEnter *.sh setlocal ts=2 sw=2 sts=2
+" augroup END
 
 "" vim-plug
 call plug#begin('~/.vim/plugged')
