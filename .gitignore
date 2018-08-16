@@ -1,4 +1,7 @@
+etc/
 bak/
 orig/
 emacsd/
 secret/
+vim/
+zsh/
