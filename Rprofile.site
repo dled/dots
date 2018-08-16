@@ -1,0 +1,45 @@
+## Rprofile.site (~/.Rprofile)
+## see help(Startup)
+options(width=80, tab.width=4)
+options(digits=6)
+options(max.print=100)
+options(editor="vim")
+options(pager="less")
+options(chmhelp=TRUE)
+options(menu.graphics=FALSE)
+options(graphics.record=TRUE)
+options(papersize="a4")
+setHook(packageEvent("grDevices", "onLoad"),
+        function(...) grDevices::ps.options(horizontal=FALSE))
+set.seed(123456L)
+
+# interactive
+options(prompt="\033[0;36m ϱ \033[0;37m", continue="\033[2;36m ... \033[0;37m")
+utils::rc.settings(ipck=TRUE)
+# q <- function(save="no", ...) quit(save=save)
+
+# set the default cloud mirror 'network-close' to everybody
+local({
+    r <- getOption("repos")
+    r["CRAN"] <- "https://cloud.r-project.org"
+    options(repos = r)
+})
+
+# start session
+.First <- function(){
+  if(interactive()){
+    cat("\nSTART @ ", date(), "\n\n")
+    library(ooklaverse)
+  }
+}
+# end sesssion
+.Last <- function(){
+  if(interactive()){
+    hist_file <- Sys.getenv("R_HISTFILE")
+    if(hist_file=="") hist_file <- "~/.rhistory"
+    savehistory(hist_file)
+    cat("\nDONE @ ", date(), "\n\n")
+  }
+
+}
+## EOF Rprofile.site (~/.Rprofile)
