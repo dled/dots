@@ -24,3 +24,5 @@ alias tml='tmux list-sessions'
 # zsh
 alias zshconf="vim ~/.zshrc"
 alias omz="vim ~/.omz"
+# R
+alias R="R --no-environ --no-restore --no-save"
