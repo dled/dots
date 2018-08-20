@@ -1,5 +1,4 @@
 # dot files
-_ !!! Experimental !!! _
 
 
 (November 2015), we;re looking at
