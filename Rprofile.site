@@ -30,6 +30,14 @@ local({
   if(interactive()){
     cat("\nSTART @ ", date(), "\n\n")
     library(ooklaverse)
+    library(lineprof)
+    library(microbenchmark)
+    library(magrittr)
+    library(httr)
+    library(rvest)
+    library(xml2)
+    library(decapitated)
+    decapitated::set_chrome_env("/opt/chrome-linux/chrome")
   }
 }
 # end sesssion
