@@ -2,7 +2,8 @@
 ## see help(Startup)
 options(width=80, tab.width=4)
 options(digits=6)
-options(max.print=100)
+options(quote=FALSE)
+options(max.print=999L)
 options(editor="vim")
 options(pager="less")
 options(chmhelp=TRUE)
@@ -28,16 +29,21 @@ local({
 # start session
 .First <- function(){
   if(interactive()){
-    cat("\nSTART @ ", date(), "\n\n")
-    library(ooklaverse)
-    library(lineprof)
-    library(microbenchmark)
-    library(magrittr)
-    library(httr)
-    library(rvest)
-    library(xml2)
-    library(decapitated)
-    decapitated::set_chrome_env("/opt/chrome-linux/chrome")
+	  cat("\nSTART @ ", date(), "\n\n")
+	  library(ooklaverse)
+	  library(data.table)
+	  options(datatable.verbose=TRUE)
+	  options(datatable.optimize=3L)
+	  library(lineprof)
+	  library(microbenchmark)
+	  library(feather)
+	  library(h2o)
+	  library(magrittr)
+	  library(rvest)
+	  library(httr)
+	  library(xml2)
+	  library(decapitated)
+	  decapitated::set_chrome_env("/opt/chrome-linux/chrome")
   }
 }
 # end sesssion
