@@ -1,6 +1,9 @@
 #!/usr/bin/zsh
 # path to oh-my-zsh installation.
   export ZSH=$HOME/.omz
+POWERLEVEL9K_MODE="nerdfont-complete"
+# custom/{plugins,themes}
+ZSH_CUSTOM=$ZSH/custom
 
 # factory OMZ settings
 ZSH_THEME="powerlevel9k/powerlevel9k"
@@ -11,10 +14,7 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
-
-# custom/{plugins,themes}
-ZSH_CUSTOM=$ZSH/custom
-
+# highlighting plugins=(zsh-syntax-highlighting) 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 
 # plugins
@@ -36,7 +36,7 @@ source $HOME/.aliasrc
 source $HOME/.rvm/scripts/rvm
 
 # OMZ
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
