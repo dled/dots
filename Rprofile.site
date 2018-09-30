@@ -31,6 +31,7 @@ local({
   if(interactive()){
 	  cat("\nSTART @ ", date(), "\n\n")
 	  library(ooklaverse)
+	  library(crayon)
 	  library(data.table)
 	  options(datatable.verbose=TRUE)
 	  options(datatable.optimize=3L)
