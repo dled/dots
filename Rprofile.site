@@ -39,13 +39,13 @@ local({
 	  library(lineprof)
 	  library(microbenchmark)
 	  library(feather)
-	  library(h2o)
 	  library(magrittr)
 	  library(rvest)
 	  library(httr)
 	  library(xml2)
 	  library(decapitated)
 	  decapitated::set_chrome_env("/opt/chrome-linux/chrome")
+      library(r2d3)
   }
 }
 # end sesssion
