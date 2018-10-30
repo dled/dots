@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/env zsh
 # path to oh-my-zsh installation.
   export ZSH=$HOME/.omz
 POWERLEVEL9K_MODE="nerdfont-complete"
