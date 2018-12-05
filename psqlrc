@@ -10,15 +10,17 @@
 \encoding unicode
 
 \set PROMPT1 '%[%033[1;33m%]%M%[%033[0m%]%[%033[1;31m%]:%>%[%033[0m%] %[%033[1;32m%]%n%[%033[0m%]%[%033[1;34m%]@%/%[%033[0m%]%R%#%x '
-\set PROMPT2 '%[%033[1;32m%]%n%[%033[0m%]@%[%033[1;34m%]%/%[%033[0m%]%R%#%x '
+\set PROMPT2 ''
 \set PAGER always
-\set HISTFILE ~/.psql_history
+\set HISTFILE /media/sf_D_DRIVE/tstk/db_services_mosaik_internal/.psql_history- :USER - :HOST - :PORT - :DBNAME
 \set HISTSIZE 2000
 \set HISTCONTROL ignoredups
---\set VERBOSITY verbose
+\set VERBOSITY verbose
 
 \set ON_ERROR_ROLLBACK interactive
 \set COMP_KEYWORD_CASE preserve-lower
+
+\pset pager always
 
 \x auto
 \pset null '[null]'
