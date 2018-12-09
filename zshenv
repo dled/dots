@@ -1,10 +1,12 @@
-#!/usr/bin/zsh
+#!/usr/bin/env zsh
 #          _              
 #  _______| |__   ___  _ ____    __
 # |_  / __| '_ \ / _ \| '_ \ \  / /
 #  / /\__ \ | | |  __/| | | \ \/ /
 # /___|___/_| |_|\___||_| |_|\__/
 
+export PGDATA=/usr/local/pgsql/data
+# export PGHOST
 export LANG=en_US.UTF-8
 export ARCHFLAGS="-arch x86_64"
 export TERM="screen-256color"
@@ -39,6 +41,7 @@ manpath=(
 )
 
 path=(
+    /usr/local/pgsql/bin
     $HOME/{bin,sbin}
     $HOME/.local/{bin,sbin}
     /usr/local/{bin,sbin}
