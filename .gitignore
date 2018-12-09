@@ -2,6 +2,7 @@ etc/
 bak/
 orig/
 emacsd/
+initd/
 secret/
 vim/
 zsh/
