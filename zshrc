@@ -1,12 +1,10 @@
 #!/usr/bin/zsh
+ZDOTDIR=$HOME
+ZSH=$ZDOTDIR/.omz
 
 # tmux plugin
 # ZSH_TMUX_AUTOSTART="true"
 # ZSH_TMUX_AUTOCONNECT="true"
-
-
-# path to oh-my-zsh installation.
-export ZSH=$HOME/.omz
 
 # factory OMZ settings
 ZSH_THEME="powerlevel9k/powerlevel9k"
@@ -25,25 +23,26 @@ ZSH_CUSTOM=$ZSH/custom
 plugins=(
   compleat
   git
+  gem
   tmux
   zsh-syntax-highlighting
 )
 
 # alias
-source $HOME/dotenv/aliasrc
+source /opt/dotenv/aliasrc
 
 # pager
-source $HOME/dotenv/lessopts
+source /opt/dotenv/lessopts
 
 # OMZ
 source $ZSH/oh-my-zsh.sh
 
 # rvm
-# source $HOME/.rvm/scripts/rvm
+source /opt/rvm/scripts/rvm
 
 # nvm
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+export NVM_DIR="/opt/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # autoload -U add-zsh-hook
