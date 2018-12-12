@@ -2,47 +2,46 @@
 "" (.vimrc) Basic Settings - vim-plug
 ""------------------------------------------------
 if 0 | endif
-
 set laststatus=2
 set nocompatible
 set encoding=utf-8
 set wildmenu
 set lazyredraw
-
 set history=256
+
+" autoindent / tabstop / softtabstop / shiftwidth
+set et
+set ai
+set sw=2
+set ts=2
+"set backspace=indent,eol,start
+
 set nobackup
 set nowritebackup
 set noswf
 
-set noruler
+set ruler
 set number
-set novisualbell
+set hidden
+set nowrap
 set noerrorbells
-
+set novisualbell
 set notimeout
-set ttimeout
-set ttimeoutlen=100
 
 set incsearch
 set hlsearch
-set smartcase
 set showmatch
 
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-set splitbelow
-set splitright
+"nnoremap <C-J> <C-W><C-J>
+"nnoremap <C-K> <C-W><C-K>
+"nnoremap <C-L> <C-W><C-L>
+"nnoremap <C-H> <C-W><C-H>
+"set splitbelow
+"set splitright
 
-" autoindent / tabstop / softtabstop / shiftwidth
-"set ai
-"set ts=4
-"set sts=4
-"set sw=4
-set noexpandtab
-"set backspace=indent,eol,start
-"set nowrap
+
+
+
 
 syntax match Tab /\t/
 hi Tab ctermbg=blue
