@@ -1,12 +1,15 @@
-#!/usr/bin/env zsh
+#!/usr/bin/zsh
 #          _              
 #  _______| |__   ___  _ ____    __
 # |_  / __| '_ \ / _ \| '_ \ \  / /
 #  / /\__ \ | | |  __/| | | \ \/ /
 # /___|___/_| |_|\___||_| |_|\__/
 
+export ZDOTDIR="$HOME"
+export ZSH="$ZDOTDIR/.omz"
+
 export PGDATA=/usr/local/pgsql/data
-# export PGHOST
+
 export LANG=en_US.UTF-8
 export ARCHFLAGS="-arch x86_64"
 export TERM="screen-256color"
@@ -24,7 +27,7 @@ cpath=(
 )
 
 fpath=(
-    $HOME/.zsh/completion
+    $ZSH/{functions,completion}
     $fpath
 )
 
@@ -41,11 +44,11 @@ manpath=(
 )
 
 path=(
-    /usr/local/pgsql/bin
     $HOME/{bin,sbin}
     $HOME/.local/{bin,sbin}
     /usr/local/{bin,sbin}
     /usr/{bin,sbin}
     /{bin,sbin}
     $JAVA_HOME/bin
+    /usr/local/pgsql/bin
 )
