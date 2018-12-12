@@ -9,6 +9,7 @@ export ZDOTDIR="$HOME"
 export ZSH="$ZDOTDIR/.omz"
 
 export PGDATA=/usr/local/pgsql/data
+export VIMRUNTIME=/usr/share/vim/vim80
 
 export LANG=en_US.UTF-8
 export ARCHFLAGS="-arch x86_64"
