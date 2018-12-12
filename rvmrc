@@ -1,33 +1,27 @@
 #!/usr/bin/env bash
 # dot rvmrc
+
+# RVM path
 rvm_prefix="/opt"
 rvm_path="$rvm_prefix/rvm"
+rvm_archives_path="$rvm_path/archives"
 rvm_bin_path="$rvm_path/bin"
 rvm_config_path="$rvm_path/config"
-rvm_source_path="$rvm_path/source"
 rvm_log_path="$rvm_path/log"
-rvm_environments_path="$rvm_path/environments"
-rvm_gems_path="$rvm_path/gems"
+rvm_scripts_path="$rvm_path/scripts"
 rvm_source_path="$rvm_path/src"
-rvm_archives_path="$rvm_path/archives"
 rvm_tmp_path="$rvm_path/tmp"
 
-rvm_arch_flags="-arch x86_64"
-rvm_make_flags=( -j 3)
-
-rvm_etc_profile_flag=0
-rvm_ignore_dotfiles_flag=1
-rvm_project_rvmrc=1
-rvm_autoinstall_bundler_flag=1
-
 rvm_install_on_use_flag=1
-rvm_gemset_create_on_use_flag=1
-rvm_auto_reload_flag=1
-rvm_silence_path_mismatch_check_flag=1
+rvm_ignore_dotfiles_flag=1
 
-rvm_sile_flag=1
-rvm_silence_path_mismatch_check_flag=1
+rvm_arch_flags="-arch x86_64"
+rvm_make_flags=( -j)
+
+rvm_niceness=1
 rvm_pretty_print_flag=1
+rvm_silent_flag=0
+
 # GEM_HOME=/home/dled/.rvm/gems/ruby-2.5.1
 # GEM_PATH=/home/dled/.rvm/gems/ruby-2.5.1:/home/dled/.rvm/gems/ruby-2.5.1@global
 # IRBRC=/home/dled/.rvm/rubies/ruby-2.5.1/.irbrc
@@ -38,10 +32,10 @@ rvm_pretty_print_flag=1
 # rvm_docs_type=
 # rvm_gemstone_package_file=
 # rvm_gemstone_url=
-# rvm_niceness=
 # rvm_nightly_flag=
 # rvm_only_path_flag=
 # rvm_proxy=
+# rvm_quiet_flag=
 # rvm_ruby_bits=
 # rvm_ruby_file=
 # rvm_ruby_make=

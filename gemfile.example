@@ -1,0 +1,54 @@
+source "https://rubygems.org"
+gemspec
+
+gem 'actionmailer'
+gem 'activesupport', '~> 5.0'
+
+gem 'date'
+gem 'stringio'
+gem 'iconv'
+gem 'csv'
+gem 'yaml'
+gem 'uri'
+
+gem 'eventmachine'
+gem 'fileutils'
+gem 'slack-notifier'
+gem 'logger'
+gem 'mqnotifier/mq_notifier'
+
+gem 'em-http'
+gem 'httparty'
+gem 'net/smtp'
+gem 'net/http'
+
+gem 'nokogiri'
+gem 'spreadsheet'
+gem 'roo'
+gem 'libxml-ruby'
+gem 'bunny'
+
+# (Open3) https://docs.ruby-lang.org/en/2.0.0/Open3.html
+gem 'rubysl-open3', :require => false
+# (OptionParser) https://docs.ruby-lang.org/en/2.1.0/OptionParser.html
+gem 'rubysl-optparse', :require => false
+# (RecursiveOpenStruct) subclass of OStruct allows nested hashes to be treated in a recursive fashion.
+gem 'recursive-open-struct', :require => false
+# gem 'rubysl-ostruct'
+
+# (Digest::MD5) https://ruby-doc.org/stdlib-2.4.0/libdoc/digest/rdoc/Digest/MD5.html
+# (crimp) MD5 hash from simple structs | https://rubygems.org/gems/crimp
+gem 'crimp'
+
+# (byebug) cli for TracePoint / Debug Inspector C APIs
+gem 'pg'
+gem 'sequel'
+gem 'rubygems'
+# (ruby gems...) cli for TracePoint / Debug Inspector C APIs
+gem 'rubygems'
+
+
+# (byebug) cli for TracePoint / Debug Inspector C APIs
+gem 'byebug'
+# (Test::Unit) https://www.rubydoc.info/gems/test-unit/3.2.9
+gem 'test-unit-full'
