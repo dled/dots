@@ -24,5 +24,7 @@ alias tml='tmux list-sessions'
 # zsh
 alias zshconf="vim ~/.zshrc"
 alias omz="vim ~/.omz"
+# xclip
+alias xclip='xargs echo -n | xclip -selection clipboard'
 # R
 alias R="R --no-environ --no-restore --no-save"
