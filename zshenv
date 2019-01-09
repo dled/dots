@@ -6,10 +6,8 @@
 # /___|___/_| |_|\___||_| |_|\__/
 
 export ZDOTDIR="$HOME"
-export ZSH="$ZDOTDIR/.omz"
 
 export PGDATA=/usr/local/pgsql/data
-export VIMRUNTIME=/usr/share/vim/vim80
 
 export LANG=en_US.UTF-8
 export ARCHFLAGS="-arch x86_64"
@@ -44,6 +42,7 @@ manpath=(
     $manpath
 )
 
+# /opt/rvm/{gems,rubies}/ruby-2.5.1/bin
 path=(
     $HOME/{bin,sbin}
     $HOME/.local/{bin,sbin}

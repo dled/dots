@@ -2,6 +2,7 @@
 "" (.vimrc) Basic Settings - vim-plug
 ""------------------------------------------------
 if 0 | endif
+
 set laststatus=2
 set nocompatible
 set encoding=utf-8
@@ -10,10 +11,6 @@ set lazyredraw
 set history=256
 
 " autoindent / tabstop / softtabstop / shiftwidth
-set et
-set ai
-set sw=2
-set ts=2
 set backspace=indent,eol,start
 
 set nobackup
@@ -21,9 +18,8 @@ set nowritebackup
 set noswf
 
 set ruler
-set number
-set hidden
 set showcmd
+set wildmenu
 
 set background=dark
 set noerrorbells
@@ -33,6 +29,9 @@ set notimeout
 set so=2
 set whichwrap=b,s,<,>,[,]
 
+syntax on
+filetype on
+filetype plugin indent on
 set incsearch
 set hlsearch
 set showmatch
@@ -50,13 +49,8 @@ nnoremap <space> za
 "set foldenable
 "set foldmethod=indent
 "hset foldnestmax=10
-"set foldlevelstart=10
 
-filetype on
-filetype plugin indent on
-
-syntax enable
-syntax on
+packadd! matchit
 
 "function! <SID>TrimWS()
 "let _s=@/

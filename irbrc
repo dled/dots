@@ -31,6 +31,7 @@ if Readline::VERSION == 'EditLine wrapper'
   end
 end
 IRB.conf[:PROMPT_MODE] = :DOTFILES
+
 # load-errors on pretty-print / ie / colorized
 %w[
   pp
@@ -46,14 +47,14 @@ end
 
 # ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
 
-Wirble.init
-Wirble.colorize
-colors = Wirble::Colorize.colors.merge({
-  :object_class => :purple,
-  :symbol => :purple,
-  :symbol_prefix => :purple
-})
-Wirble::Colorize.colors = colors
+#Wirble.init
+#Wirble.colorize
+#colors = Wirble::Colorize.colors.merge({
+#  :object_class => :purple,
+#  :symbol => :purple,
+#  :symbol_prefix => :purple
+#})
+#Wirble::Colorize.colors = colors
 
 if ENV.include?('RAILS_ENV')
   rails_root = File.basename(Dir.pwd)

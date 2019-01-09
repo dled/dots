@@ -46,3 +46,4 @@ rvm_silent_flag=0
 # rvm_silent_flag=
 # rvm_use_flag=
 # rvm_ruby_string=
+rvm_auto_reload_flag=1
