@@ -30,6 +30,7 @@ local({
 .First <- function(){
   if(interactive()){
 	  cat("\nSTART @ ", date(), "\n\n")
+	  library(broom)
 	  library(ooklaverse)
 	  library(crayon)
 	  library(data.table)
@@ -43,8 +44,10 @@ local({
 	  library(xml2)
 	  # library(decapitated)
 	  # decapitated::set_chrome_env("/opt/chrome-linux/chrome")
+	  library(remotes)
 	  library(stars)
 	  library(units)
+	  library(ggforce)
   }
 }
 # end sesssion
