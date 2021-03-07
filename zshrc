@@ -2,7 +2,7 @@
 export TERM="xterm-256color"
 # path to oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-
+export GPG_TTY=`tty`
 #autoload bashcompinit && bashcompinit
 #complete -C '/usr/local/aws/bin/aws_completer' aws
 
