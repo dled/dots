@@ -5,28 +5,16 @@ set encoding=utf-8
 set backspace=indent,eol,start
 filetype plugin on
 filetype indent on
+syntax on
 
-"" vim-plug
-call plug#begin('~/.vim/plugged')
-"" shorthand
-Plug 'junegunn/vim-easy-align'
-"" any valid git url
-Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-"" non-master branch
-""Plug 'rdnetto/ycm-generator', { 'branch': 'stable' }
-"" plug-in options (tag, rtp)
-Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
-"" group deps
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-"" lazy loading
-""Plug 'scrooloose/nerdtree', { 'on' : 'NERDTreeToggle' }
-""Plug 'tpope/vim-fireplace', { 'for' : 'clojure' }
-"" post-update hook plugs in outside ~/.vim/plugged
-"" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': '.install --all' }
-"" add plug-ins to &runtimepath
-call plug#end()
-"" Time out on keycodes -- but not mappings
-"" https://gist.github.com/mislav/5706063
+autocmd ColorScheme pulumi highlight Normal ctermbg=235
+colorscheme pulumi
+
+nnoremap <Leader>o o<Esc>
+nnoremap <NL> i<CR><Esc>
+nnoremap gob  :s/\((\zs\\|,\ *\zs\\|)\)/\r&/g<CR><Bar>:'[,']normal ==<CR>
+nnoremap <silent> <F3> :redir @a<CR>:g//<CR>:redir END<CR>:new<CR>:put! a<CR>
+
 set notimeout
 set ttimeout
 set ttimeoutlen=100
@@ -44,10 +32,10 @@ set foldenable
 nnoremap <space> za
 set foldlevelstart=10
 "" Space
-set nowrap
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+"set nowrap
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 ""set autoindent
 
@@ -56,20 +44,18 @@ set expandtab
 "else
 "	set background=dark
 "endif
-"colorscheme badwolf
 
 set wildmenu
 set lazyredraw
 augroup configgroup
 	autocmd!
 	autocmd VimEnter * highlight clear SignColumn
-	autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md,*.rb :call <SID>StripTrailingWhitespaces()
+	autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.rb :call <SID>StripTrailingWhitespaces()
 	autocmd BufEnter *.cls setlocal filetype=java
 	autocmd BufEnter *.zsh-theme setlocal filetype=zsh
 	autocmd BufEnter Makefile setlocal noexpandtab
-	autocmd BufEnter *.sh setlocal tabstop=2
-	autocmd BufEnter *.sh setlocal shiftwidth=2
-	autocmd BufEnter *.sh setlocal softtabstop=2
+	autocmd BufEnter *.sh setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+  autocmd BufRead,BufNewfile *.md setlocal textwidth=80
 augroup END
 
 " strips trailing whitespace at the end of files. this

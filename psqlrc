@@ -9,7 +9,7 @@
 \timing
 \encoding unicode
 
-\set PROMPT1 '%[%033[1;33m%]%M%[%033[0m%]%[%033[1;31m%]:%>%[%033[0m%] %[%033[1;32m%]%n%[%033[0m%]%[%033[1;34m%]@%/%[%033[0m%]%R%#%x '
+\set PROMPT1 '%[%033[1;33m%]%M%[%033[0m%]:%[%033[1;31m%]%>%[%033[0m%] %[%033[1;32m%]%n%[%033[0m%]@%[%033[1;34m%]%/%[%033[0m%]%R%#%x '
 \set PROMPT2 '%[%033[1;32m%]%n%[%033[0m%]@%[%033[1;34m%]%/%[%033[0m%]%R%#%x '
 \set PAGER always
 \set HISTFILE ~/.psql_history
@@ -21,7 +21,7 @@
 \set COMP_KEYWORD_CASE preserve-lower
 
 \x auto
-\pset null '[null]'
+\pset null 'ø'
 \pset border 2
 
 \set QUIET 0

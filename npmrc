@@ -1,1 +1,4 @@
-prefix=$HOME/.npm-global
+prefix=/opt/npm-global
+//registry.npmjs.org/:_authToken=dcf2b798-e873-4dc8-a917-8f1adc1f4a31
+init.author.email=dylan.ledbetter@ookla.com
+init.author.name=Dylan Ledbetter
