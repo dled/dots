@@ -6,12 +6,21 @@ set backspace=indent,eol,start
 filetype plugin on
 filetype indent on
 
+"" Automatic Installation (vim-plug)
+"" https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 "" vim-plug
+"" https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 "" shorthand
 Plug 'junegunn/vim-easy-align'
 "" any valid git url
-Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+"" Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 "" non-master branch
 ""Plug 'rdnetto/ycm-generator', { 'branch': 'stable' }
 "" plug-in options (tag, rtp)
@@ -19,10 +28,11 @@ Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 "" group deps
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 "" lazy loading
-""Plug 'scrooloose/nerdtree', { 'on' : 'NERDTreeToggle' }
-""Plug 'tpope/vim-fireplace', { 'for' : 'clojure' }
+Plug 'scrooloose/nerdtree', { 'on' : 'NERDTreeToggle' }
+"" vader
+Plug 'junegunn/vader.vim',  { 'on': 'Vader', 'for': 'vader' }
 "" post-update hook plugs in outside ~/.vim/plugged
-"" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': '.install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': '.install --all' }
 "" add plug-ins to &runtimepath
 call plug#end()
 "" Time out on keycodes -- but not mappings
