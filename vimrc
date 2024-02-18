@@ -6,6 +6,12 @@ set backspace=indent,eol,start
 filetype plugin on
 filetype indent on
 
+"" helper function
+function! Cond(cond, ...)
+  let opts = get(a:000, 0, {})
+  return a:cond ? opts : extend(opts, { 'on': [], 'for': [] })
+endfunction
+
 "" Automatic Installation (vim-plug)
 "" https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -14,27 +20,50 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+"" Automatic Installation of missing plugins
+"" https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation-of-missing-plugins
+"" from CLI
+"" vim -es -u vimrc -i NONE -c "PlugInstall" -c "qa"
+
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+
 "" vim-plug
 "" https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
+"" register vim-plug itself
+Plug 'junegunn/vim-plug'
 "" shorthand
 Plug 'junegunn/vim-easy-align'
-"" any valid git url
-"" Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-"" non-master branch
-""Plug 'rdnetto/ycm-generator', { 'branch': 'stable' }
-"" plug-in options (tag, rtp)
-Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
-"" group deps
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 "" lazy loading
 Plug 'scrooloose/nerdtree', { 'on' : 'NERDTreeToggle' }
-"" vader
-Plug 'junegunn/vader.vim',  { 'on': 'Vader', 'for': 'vader' }
-"" post-update hook plugs in outside ~/.vim/plugged
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': '.install --all' }
+"" fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+"" gist support
+Plug 'https://gist.github.com/junegunn/5dff641d68d20ba309ce',
+    \ { 'as': 'vim-awesome', 'do': 'mkdir -p plugin; cp -f *.vim plugin/' }
+"" conditional
+"if has('mac')
+"  Plug 'junegunn/vim-xmark'
+"endif
+
+"" Load on nothing
+"" ultisnips error (py3 import not available (E319)
+"Plug 'SirVer/ultisnips', { 'on': [] }
+"Plug 'Valloric/YouCompleteMe', { 'on': [] }
+"
+"augroup load_us_ycm
+"  autocmd!
+"  autocmd InsertEnter * call plug#load('ultisnips', 'YouCompleteMe')
+"                     \| autocmd! load_us_ycm
+"augroup END
+
 "" add plug-ins to &runtimepath
 call plug#end()
+
 "" Time out on keycodes -- but not mappings
 "" https://gist.github.com/mislav/5706063
 set notimeout
@@ -73,7 +102,7 @@ set lazyredraw
 augroup configgroup
 	autocmd!
 	autocmd VimEnter * highlight clear SignColumn
-	autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md,*.rb :call <SID>StripTrailingWhitespaces()
+	autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.rb :call <SID>StripTrailingWhitespaces()
 	autocmd BufEnter *.cls setlocal filetype=java
 	autocmd BufEnter *.zsh-theme setlocal filetype=zsh
 	autocmd BufEnter Makefile setlocal noexpandtab
@@ -106,8 +135,8 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-set splitbelow
-set splitright
+"set splitbelow 
+"set splitright
 " max height / width / normalize
 " <C-W _ | =>
 " " swap opp / breakout new tab / close others
